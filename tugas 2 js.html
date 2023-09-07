@@ -1,0 +1,34 @@
+<script>
+    let karyawan = "Ridwan";
+    let jabatan = "Manager";
+    let status = "Menikah";
+    let gaji = 0;
+
+    document.write('Karyawan : ' +karyawan +
+                    '<br> Jabatan : ' +jabatan +
+                    '<br> Status Perkawinan: '+status +
+                    '<hr>');
+                    
+    if (jabatan == 'Manager'){
+    gaji = 15000000;
+    }else if (jabatan == 'Asisten Manager'){
+    gaji = 10000000;
+    }else gaji = 5000000;
+
+    document.write('Gaji :'+gaji);
+
+let tunkerja = 15/100 * gaji;
+document.write ('<br>Tunjangan Kerja : '+tunkerja);
+
+let bpjs = 10/100 * gaji;
+document.write ('<br> BPJS : ' +bpjs);
+
+let tunkeluarga = 0 ;
+if(status == 'Menikah') tunkeluarga = 20/100 * gaji
+else tunkeluarga =  gaji;
+
+document.write('<br> Tunjangan Keluarga : ' +tunkeluarga)
+
+document.write(`<br> Total Gaji : ${gaji + tunkeluarga + bpjs + tunkerja}`);
+
+</script>
