@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Nama Pegawai</td>
+                <td>Jabatan</td>
+                <td>Gaji Pokok</td>
+                <td>Tunjangan Jabatan</td>
+                <td>Tunjangan Kesehatan</td>
+                <td>Gaji kotor</td>
+                <td>Agama</td>
+                <td>Zakat Profesi</td>
+                <td>Take Home Pay</td>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                let namapegawai = ["Andi", "Budi", "Rahmat", "Alam", "Jesika", "Henderson", "Vardy", "Alison", "Keita", "Arnold"];
+
+                namapegawai.forEach((pegawai, index) => {
+                    let jabatan = '';
+                    if (index < 2) {
+    jabatan = "Manager";
+  } else if (index >= 2 && index < 5) {
+    jabatan = "Asisten Manager";
+  } else if (index >= 5 && index < 8) {
+    jabatan = "Supervisor";
+  } else {
+    jabatan = "Staff";
+  }
+  
+  let gapok = 0;
+  switch (jabatan) {
+    case "Manager":
+      gapok = 15000000;
+      break
+    case "Asisten Manager": 
+      gapok = 10000000;
+      break
+    case "Supervisor":
+      gapok = 7000000;
+      break
+    case "Staff":
+      gapok = 4000000;
+      break
+    default:
+      gapok = 0;
+  }
+
+  let tunjabatan =20/100 * gapok
+  let tunkesehatan = 10/100 * gapok
+  let gajiKotor = gapok + tunjabatan + tunkesehatan
+  let agama = index % 2 === 0 ? "Muslim" : "Non Muslim"
+  let warna = index % 2 === 0 ? "Yellow" : "Blue"
+  let zakat = 0;
+  if(agama == 'Muslim'){
+    zakat = 2.5/100 * gajiKotor;
+  }
+  let takeHomePay = gajiKotor - zakat;
+
+                    document.write (`<tr bgcolor=${warna}>
+                        <td>${pegawai}</td>
+                        <td>${jabatan}</td>
+                        <td>${gapok}</td>
+                        <td>${tunjabatan}</td>
+                        <td>${tunkesehatan}</td>
+                        <td>${gajiKotor}</td>
+                        <td>${agama}</td>
+                        <td>${zakat}</td>
+                        <td>${takeHomePay}</td>
+                        </tr>`)
+                });
+            </script>
+
+        </tbody>
+    </table>
+</body>
+</html>
