@@ -58,14 +58,14 @@
   let tunkesehatan = 10/100 * gapok
   let gajiKotor = gapok + tunjabatan + tunkesehatan
   let agama = index % 2 === 0 ? "Muslim" : "Non Muslim"
-  let warna = index % 2 === 0 ? "Yellow" : "Blue"
+  let warna = index % 2 === 0 ? "Blue" : "Red"
   let zakat = 0;
   if(agama == 'Muslim'){
     zakat = 2.5/100 * gajiKotor;
   }
   let takeHomePay = gajiKotor - zakat;
 
-                    document.write (`<tr bgcolor=${warna}>
+                    document.write (`<tr bgcolor="${warna}">
                         <td>${pegawai}</td>
                         <td>${jabatan}</td>
                         <td>${gapok}</td>

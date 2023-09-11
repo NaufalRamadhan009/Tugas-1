@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+    <table style="width: 100%; background-color: pink; border: 1px solid; text-align: center;">
+        <tr>
+            <th colspan="2">Form Toko Online</th>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label for="">Nama</label></td>
+            <td><input type="text" name="nama" placeholder="Masukan Nama Anda"></td>
+        </tr>
+        <tr>
+            <td><label for=""Produk</label></td>
+            <td><select name="produk">
+                <option value="TV">TV</option>
+                <option value="AC">AC</option>
+                <option value="Kulkas">Kulkas</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="">Jumlah</label></td>
+            <td><input type="text" name="jumlah" placeholder="Masukan Jumlah"></td>
+        </tr>
+        <tr>
+            <!-- <td colspan="2"><input type="button" name="prose" value="submit"></td> -->
+            <td colspan="2"><input type="button" name="proses" value="Submit" onclick="dataBarang()"></td>
+        </tr>
+    </table>
+    </form>
+    <script src="../form.js"></script>
+</body>
+</html>
