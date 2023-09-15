@@ -1,0 +1,38 @@
+<script>
+class Gempa {
+  constructor(lokasi, skala) {
+    this.lokasi = lokasi;
+    this.skala = skala;
+  }
+
+  dampak() {
+    let dampakInfo = "Tidak terasa";
+
+    if (this.skala > 2 && this.skala <= 4) {
+      dampakInfo = "Bangunan retak-retak";
+    } else if (this.skala > 4 && this.skala <= 6) {
+      dampakInfo = "Bangunan roboh";
+    } else if (this.skala > 6) {
+      dampakInfo = "Bangunan roboh dan berpotensi tsunami";
+    }
+
+    document.write("Lokasi Gempa:", this.lokasi);
+    document.write("<br>Skala:", this.skala);
+    document.write("<br>Dampak:", dampakInfo);
+    document.write("<br>---------------------");
+    document.write("<br>");
+  }
+}
+
+let gempa1 = new Gempa("Lokasi 1", 1.5);
+let gempa2 = new Gempa("Lokasi 2", 3.8);
+let gempa3 = new Gempa("Lokasi 3", 5.2);
+let gempa4 = new Gempa("Lokasi 4", 7.2);
+let gempa5 = new Gempa("Lokasi 5", 8.5);
+
+gempa1.dampak();
+gempa2.dampak();
+gempa3.dampak();
+gempa4.dampak();
+gempa5.dampak();
+</script>
