@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 6</title>
+</head>
+<body>
+    <h1>BIODATA SAYA</h1>
+    <ul>
+        <li><a href="#" id="profil">Profil</a></li>
+        <li><a href="#" id="motohidup">Moto Hidup</a></li>
+        <li><a href="#" id="keahlian">Keahlian</a></li>
+    </ul>
+
+    <div id="tampilan">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#profil').click(function(){
+                $('#tampilan').html('<h1>Profile</h1><p>Nama Saya Naufal Rizqi Ramadhan Saya Tinggal Di Bandung');
+            });
+            $('#motohidup').click(function(){
+                $('#tampilan').html('<h1>Moto Hidup</h1><p>Moto Hidup Saya Adalah Jika Oranglain Bisa Kenapa Harus Saya HEHE');
+            });
+            $('#keahlian').click(function(){
+                $('#tampilan').html('<h1>Keahlian</h1><p>Keahlian Saya Adalah Menjadi Beban Entah Itu Beban Di Game Atau Beban Keluarga HEHE</p><p>Pengalaman Saya Ngga Ada Kayanya Entah Emang Ngga Ada Atau Ngga Tau Mau Masukin Apa HEHE');
+            });
+            $('a').mouseover(function(){
+                $(this).css('font-weight','bold')
+                $(this).css('color','red')
+            });
+            $('a').mouseout(function(){
+                $(this).css('font-weight','normal')
+                $(this).css('color','black')
+            });
+        })
+    </script>
+</body>
+</html>
