@@ -4,15 +4,15 @@ require_once "lingkaran.php";
 require_once "persegi panjang.php";
 require_once "segitiga.php";
 
-// Membuat objek Lingkaran, PersegiPanjang, dan Segitiga
+
 $lingkaran = new Lingkaran(9);
 $persegiPanjang = new PersegiPanjang(5, 12);
 $segitiga = new Segitiga(9, 6);
 
-// Membuat array objek untuk pengulangan
+
 $bidangArr = array($lingkaran, $persegiPanjang, $segitiga);
 
-// Header tabel
+
 echo "<table border='1'>
         <thead>
             <tr>
@@ -24,7 +24,7 @@ echo "<table border='1'>
         </thead>
         <tbody>";
 
-// Pengulangan untuk mengisi tabel
+
 for ($i = 0; $i < count($bidangArr); $i++) {
     echo "<tr>";
     echo "<td>" . ($i + 1) . "</td>";
@@ -34,7 +34,7 @@ for ($i = 0; $i < count($bidangArr); $i++) {
     echo "</tr>";
 }
 
-// Penutup tabel
+
 echo "</tbody>";
 echo "</table>";
 ?>
